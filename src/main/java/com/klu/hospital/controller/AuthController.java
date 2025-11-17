@@ -18,6 +18,8 @@ public class AuthController {
         this.userService = userService;
     }
 
+
+
     // ⭐ ADD THIS GET ENDPOINT SO BROWSER CAN ACCESS /auth/signup
     @GetMapping("/signup")
     public ResponseEntity<String> testSignupGet() {

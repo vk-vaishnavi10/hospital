@@ -31,6 +31,7 @@ public class UserService {
         userRepository.save(user);
         return "User registered successfully!";
     }
+   
 
     public String loginUser(String username, String password) {
         Optional<User> userOptional = userRepository.findByUsername(username);
