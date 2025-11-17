@@ -11,10 +11,17 @@ import java.util.Map;
 @RequestMapping("/auth")
 @CrossOrigin(origins = "*")
 public class AuthController {
+
     private final UserService userService;
 
     public AuthController(UserService userService) {
         this.userService = userService;
+    }
+
+    // ⭐ ADD THIS GET ENDPOINT SO BROWSER CAN ACCESS /auth/signup
+    @GetMapping("/signup")
+    public ResponseEntity<String> testSignupGet() {
+        return ResponseEntity.ok("Signup endpoint is reachable");
     }
 
     @PostMapping("/signup")
